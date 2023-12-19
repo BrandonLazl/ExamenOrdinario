@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,53 +6,58 @@ using System.Threading.Tasks;
 
 namespace ExamenOrdinario
 {
-     class Program
+    class Program
     {
+
+
         static void Main(string[] args)
         {
-             
             List<string> personas = new List<string>();
+            List<string> mascotas = new List<string>();
          
-                         while (true) 
+            while (true)
             {
 
-            Console.WriteLine(" --------------- M E N U ---------------");
-            Console.WriteLine("|[1] -      Administracion del centro    |");
-            Console.WriteLine("|[2] -    Administracion de adopciones   |");
-            Console.WriteLine("|[3] - Administracion de bienestar animal|");
-            Console.WriteLine("|[4] -     Simulación de interacciones   |");
-            Console.WriteLine("|[5] -         Finalizar programa        |");
-            Console.WriteLine(" ----------------------------------------");
+                Console.WriteLine(" --------------- M E N U ---------------");
+                Console.WriteLine("|[1] -      Administracion del centro    |");
+                Console.WriteLine("|[2] -    Administracion de adopciones   |");
+                Console.WriteLine("|[3] - Administracion de bienestar animal|");
+                Console.WriteLine("|[4] -     Simulación de interacciones   |");
+                Console.WriteLine("|[5] -         Finalizar programa        |");
+                Console.WriteLine(" ----------------------------------------");
 
-            int respuesta = int.Parse(Console.ReadLine());
+                int respuesta = int.Parse(Console.ReadLine());
 
-            switch (respuesta)
-            {
+                switch (respuesta)
+                {
 
                     case 1:
 
                         AdministracionCentro();
 
-                    break;
+                        break;
 
-                     case 2:
+                    case 2:
 
                         AdmintracionDeAdopcion();
 
-                     break;
+                        break;
 
-                     case 3:
+                    case 3:
 
 
 
-                     break;
+                        break;
 
-                    default:
+                    case 4:
+
+                    case 5:
                         break;
 
 
-             }
-            
+
+                }
+
             }
 
 
@@ -76,54 +81,55 @@ namespace ExamenOrdinario
 
                         case 1:
 
-                            while (checkWhile_2) 
-                            {
-                                
-                            Console.WriteLine(" ----- A D M I N _ P E R S O N A S ------");
-                            Console.WriteLine("|[1] -     Mostrar todas las personas    |");
-                            Console.WriteLine("|[2] -      Registrar persona nueva      |");
-                            Console.WriteLine("|[3] -     Buscar persona por nombre     |");
-                            Console.WriteLine("|[4] -         Examinar persona          |");
-                            Console.WriteLine("|[5] -     Regresar al menu anterior     |");
-                            Console.WriteLine(" ----------------------------------------");
-
-                            int respuesta_ADMINPeronas = int.Parse(Console.ReadLine());
-
-                            switch (respuesta_ADMINPeronas)
+                            while (checkWhile_2)
                             {
 
-                                case 1:
-                                      Console.Writeline($"personas");
-                                    break;
+                                Console.WriteLine(" ----- A D M I N _ P E R S O N A S ------");
+                                Console.WriteLine("|[1] -     Mostrar todas las personas    |");
+                                Console.WriteLine("|[2] -      Registrar persona nueva      |");
+                                Console.WriteLine("|[3] -     Buscar persona por nombre     |");
+                                Console.WriteLine("|[4] -         Examinar persona          |");
+                                Console.WriteLine("|[5] -     Regresar al menu anterior     |");
+                                Console.WriteLine(" ----------------------------------------");
 
-                                case 2:
-                                             Persona persona = new Persona();
+                                int respuesta_ADMINPeronas = int.Parse(Console.ReadLine());
+
+                                switch (respuesta_ADMINPeronas)
+                                {
+
+                                    case 1:
+                                        Console.WriteLine($"{personas}");
+                                        break;
+
+                                    case 2:
+                                        Persona persona = new Persona();
                                         personas.Add(persona.nombre);
-                                    break;
+                                        break;
 
-                                case 3:
-                                    break;
+                                    case 3:
 
-                                case 4:
-                                    break;
+                                        break;
 
-                                case 5:
+                                    case 4:
+                                        break;
+
+                                    case 5:
 
                                         checkWhile_2 = false;
 
-                                    break;
+                                        break;
 
-                                default:
+                                    default:
 
-                                    Console.WriteLine("Ingrese un numero valido >:(");
+                                        Console.WriteLine("Ingrese un numero valido >:(");
 
-                                    break;
-                                } 
-                            
-                            
+                                        break;
+                                }
+
+
                             }
 
-                        break;
+                            break;
 
                         case 2:
 
@@ -139,12 +145,31 @@ namespace ExamenOrdinario
                             {
 
                                 case 1:
+                                    Console.WriteLine($"{mascotas}");
                                     break;
 
                                 case 2:
+                                    Perro perro = new Perro();
+                                    Gato gato = new Gato();
+                                    Capibara capibara = new Capibara();
+
+                                    Console.WriteLine("Seleccione una especie: 1)Perro, 2)Gato, 3)Capibara");
+                                    int respuesta = int.Parse(Console.ReadLine());
+                                    if (respuesta == 1)
+                                    {
+                                        mascotas.Add(perro.nombre);
+                                    }
+                                    else if (respuesta == 2)
+                                    {
+                                        mascotas.Add(gato.nombre);
+                                    }
+                                    else if (respuesta == 3)
+                                    {
+                                        mascotas.Add(capibara.nombre);
+                                    }
                                     break;
 
-                                case 3: 
+                                case 3:
                                     break;
 
                                 case 4:
@@ -155,7 +180,7 @@ namespace ExamenOrdinario
                                     checkWhile_2 = false;
 
                                     break;
-                
+
                                 default:
                                     break;
                             }
@@ -173,57 +198,59 @@ namespace ExamenOrdinario
                             Console.WriteLine("Ingrese un numero valido >:(");
 
                             break;
-                  
+
                     }
 
                 }
-                
+
 
             }
 
             void AdmintracionDeAdopcion(bool checkWhile = true)
             {
-                while (checkWhile) 
-                {
-                
-                Console.WriteLine(" --- A D M I N _ A D O P C I O N E S ----");
-                Console.WriteLine("|[1] - Mascotas disponibles por adoptar  |");
-                Console.WriteLine("|[2] -          Adoptar mascota          |");
-                Console.WriteLine("|[3] -    Regresar a la menú anterior    |");
-                Console.WriteLine(" ----------------------------------------");
-
-                int respuesta = int.Parse(Console.ReadLine());
-
-                switch (respuesta)
+                while (checkWhile)
                 {
 
-                    case 1:
-                        break;
+                    Console.WriteLine(" --- A D M I N _ A D O P C I O N E S ----");
+                    Console.WriteLine("|[1] - Mascotas disponibles por adoptar  |");
+                    Console.WriteLine("|[2] -          Adoptar mascota          |");
+                    Console.WriteLine("|[3] -    Regresar a la menú anterior    |");
+                    Console.WriteLine(" ----------------------------------------");
 
-                    case 2:
-                        break;
+                    int respuesta = int.Parse(Console.ReadLine());
 
-                    case 3:
+                    switch (respuesta)
+                    {
+
+                        case 1:
+                            break;
+
+                        case 2:
+                            break;
+
+                        case 3:
 
                             checkWhile = false;
 
-                        break;
+                            break;
 
-                    default:
+                        default:
 
-                        Console.WriteLine("Ingrese un numero valido >:(");
+                            Console.WriteLine("Ingrese un numero valido >:(");
 
-                        break;
+                            break;
                     }
-                
-                
+
+
                 }
-                
+
 
             }
 
-
-        }        
+        }
+    }
+}
+        
 
     }
 
