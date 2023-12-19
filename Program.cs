@@ -206,15 +206,57 @@ namespace ExamenOrdinario
 
             }
 
-            void AdmintracionDeAdopcion(bool checkWhile = true)
+                        void AdmintracionDeAdopcion(bool checkWhile = true)
             {
+                while (checkWhile) 
+                {
+                
+                Console.WriteLine(" --- A D M I N _ A D O P C I O N E S ----");
+                Console.WriteLine("|[1] - Mascotas disponibles por adoptar  |");
+                Console.WriteLine("|[2] -          Adoptar mascota          |");
+                Console.WriteLine("|[3] -    Regresar a la menú anterior    |");
+                Console.WriteLine(" ----------------------------------------");
+
+                int respuesta = int.Parse(Console.ReadLine());
+
+                switch (respuesta)
+                {
+
+                    case 1:
+                        break;
+
+                    case 2:
+                        break;
+
+                    case 3:
+
+                            checkWhile = false;
+
+                        break;
+
+                    default:
+
+                        Console.WriteLine("Ingrese un numero valido >:(");
+
+                        break;
+                    }
+                
+                
+                }
+                
+
+            }
+
+            void AdministracionDelBienestarAnimal(bool checkWhile = true) 
+            {
+
                 while (checkWhile)
                 {
 
-                    Console.WriteLine(" --- A D M I N _ A D O P C I O N E S ----");
-                    Console.WriteLine("|[1] - Mascotas disponibles por adoptar  |");
-                    Console.WriteLine("|[2] -          Adoptar mascota          |");
-                    Console.WriteLine("|[3] -    Regresar a la menú anterior    |");
+                    Console.WriteLine(" --------------- M E N U ---------------");
+                    Console.WriteLine("|[1] -       Servicio  de Spa           |");
+                    Console.WriteLine("|[2] -         Corte de pelo            |");
+                    Console.WriteLine("|[3] -    Volver al menu anterior       |");
                     Console.WriteLine(" ----------------------------------------");
 
                     int respuesta = int.Parse(Console.ReadLine());
@@ -223,9 +265,12 @@ namespace ExamenOrdinario
                     {
 
                         case 1:
+
+
                             break;
 
                         case 2:
+
                             break;
 
                         case 3:
@@ -241,16 +286,18 @@ namespace ExamenOrdinario
                             break;
                     }
 
-
                 }
-
 
             }
 
-        }
-    }
-}
-        
+            void SimulacionDeInteracciones()
+            {
+
+                Console.WriteLine("No hubo tiempo :/");
+
+            }
+
+        }        
 
     }
 
