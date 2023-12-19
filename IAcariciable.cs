@@ -8,5 +8,6 @@ namespace ExamenOrdinario
 {
     interface IAcariciable
     {
+        void ResponderAcaricia
     }
 }
