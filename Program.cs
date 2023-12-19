@@ -28,38 +28,51 @@ namespace ExamenOrdinario
 
                 int respuesta = int.Parse(Console.ReadLine());
 
-                switch (respuesta)
-                {
+                 switch (respuesta)
+ {
 
-                    case 1:
+         case 1:
 
-                        AdministracionCentro();
+             AdministracionCentro();
 
-                        break;
+         break;
 
-                    case 2:
+          case 2:
 
-                        AdmintracionDeAdopcion();
+             AdmintracionDeAdopcion();
 
-                        break;
+          break;
 
-                    case 3:
+          case 3:
+
+             AdministracionDelBienestarAnimal();
+
+          break;
+             
+         case 4:
+
+             SimulacionDeInteracciones();
+
+         break;
+
+         case 5:
+
+             Console.WriteLine("Hasta luego :D");
+
+             Environment.Exit(0);
+
+         break;
+
+         default:
+
+             Console.WriteLine("Ingrese un numero valido >:(");
+
+             break;
 
 
-
-                        break;
-
-                    case 4:
-
-                    case 5:
-                        break;
-
-
-
-                }
-
-            }
-
+  }
+ 
+ }
 
             void AdministracionCentro(bool checkWhile = true, bool checkWhile_2 = true)
 
