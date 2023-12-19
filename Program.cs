@@ -10,6 +10,9 @@ namespace ExamenOrdinario
     {
         static void Main(string[] args)
         {
+             
+            List<string> personas = new List<string>();
+         
                          while (true) 
             {
 
@@ -90,9 +93,12 @@ namespace ExamenOrdinario
                             {
 
                                 case 1:
+                                      Console.Writeline($"personas");
                                     break;
 
                                 case 2:
+                                             Persona persona = new Persona();
+                                        personas.Add(persona.nombre);
                                     break;
 
                                 case 3:
